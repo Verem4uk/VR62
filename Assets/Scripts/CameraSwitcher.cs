@@ -1,18 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class CameraSwitcher : MonoBehaviour
 {
     [SerializeField]
     GameObject okylar;
-    
+
     [SerializeField]
     GameObject rings;
 
-    [SerializeField]
-    GameObject main;
+    Image[] intoCanvas;
 
     bool into;
     /*
@@ -24,18 +24,24 @@ public class CameraSwitcher : MonoBehaviour
     */
     private void Start()
     {
-        rings.SetActive(false);
+        print("вызвался старт");
+        intoCanvas = rings.GetComponentsInChildren<Image>();
+        foreach(Image img in intoCanvas)
+        {
+            print(img.name);
+        }
+        Switch(false);
     }
-
+    
     private void Update()
     {
         //print(Vector3.Distance(gameObject.transform.position, okylar.transform.position));
-        if(!into && Vector3.Distance(gameObject.transform.position, okylar.transform.position)<2)
+        if (!into && Vector3.Distance(gameObject.transform.position, okylar.transform.position) < 2)
         {
             Switch(false);
         }
-        
-       else if(into && Vector3.Distance(gameObject.transform.position, okylar.transform.position) > 2)
+
+        else if (into && Vector3.Distance(gameObject.transform.position, okylar.transform.position) > 2)
         {
             Switch(true);
         }
@@ -44,23 +50,29 @@ public class CameraSwitcher : MonoBehaviour
     public void Switch(bool onMain)
     {
         
-        print("вызван switch c "+onMain);
+        //print("вызван switch c " + onMain);
         if (onMain)
         {
-            print("переключаемся на главную");
+            //print("переключаемся на главную");
             //main.SetActive(true);
-            rings.SetActive(false);
+            foreach (Image img in intoCanvas)
+            {
+                img.enabled = false;
+            }
             into = false;
         }
 
         else
         {
-            print("переключаемся с главной");
+           // print("переключаемся с главной");
             //main.SetActive(false);
-            rings.SetActive(true);
+            foreach (Image img in intoCanvas)
+            {
+                img.enabled = true;
+            }
             into = true;
         }
-       
+
     }
-    
+
 }
