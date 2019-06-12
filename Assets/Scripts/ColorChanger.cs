@@ -9,9 +9,11 @@ public class ColorChanger : MonoBehaviour
     [SerializeField]
     new Image renderer;
     Color memoryColor;
+    bool working;
 
     private void OnEnable()
     {
+        print("сработал enable");
        EventManager.Switch += Render;
     }
 
@@ -28,17 +30,23 @@ public class ColorChanger : MonoBehaviour
         if (work)
         {
             renderer.color = memoryColor;
+            working = true;
         }
-        else renderer.color = Color.black;
+        else
+        {
+            renderer.color = Color.black;
+            working = false;
+        }
 
     }
     
     void ChangeColor(Color color)
     {
+        print("вызвана смена цвета");
         print(renderer.enabled);
-        if (renderer.enabled == true)
+        if (working)
         {
-            print("красим");
+           // print("красим");
             renderer.color = color;
         }
         memoryColor = color;

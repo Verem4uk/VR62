@@ -64,8 +64,11 @@ public class Rings : MonoBehaviour
 
     void ChangeSize(Image ring, float value)
     {
+        ring.rectTransform.sizeDelta= new Vector2(value, value);
+        /*
         ring.rectTransform.offsetMin = new Vector2(value, value);
         ring.rectTransform.offsetMax = new Vector2(-value, -value);
+        */
     }
 
 
@@ -82,21 +85,21 @@ public class Rings : MonoBehaviour
                 {
                     float valueInPersent = EventManager.ToPersent(17, 21, value);
                    // print("значение процента" + valueInPersent);
-                    float valueRect = EventManager.FromPersent(223, 185, valueInPersent);
+                    float valueRect = EventManager.FromPersent(204, 245, valueInPersent);
                     //print("Значение отступа" +valueRect);
                     return valueRect;                    
                 }
             case 2:
                 {
                     float valueInPersent = EventManager.ToPersent(24, 30, value);
-                    float valueRect = EventManager.FromPersent(175, 120, valueInPersent);
+                    float valueRect = EventManager.FromPersent(250, 312, valueInPersent);
                     //print("Значение отступа" + valueRect);
                     return valueRect;
                 }
             case 3:
                 {
                     float valueInPersent = EventManager.ToPersent(29, 36, value);
-                    float valueRect = EventManager.FromPersent(23, -50, valueInPersent);
+                    float valueRect = EventManager.FromPersent(420, 515, valueInPersent);
                     //print("Значение отступа" + valueRect);
                     return valueRect;
                 }
