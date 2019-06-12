@@ -24,13 +24,13 @@ public class CameraSwitcher : MonoBehaviour
     */
     private void Start()
     {
-        print("вызвался старт");
+        //print("вызвался старт");
         intoCanvas = rings.GetComponentsInChildren<Image>();
         foreach(Image img in intoCanvas)
         {
-            print(img.name);
+            //print(img.name);
         }
-        Switch(false);
+        Switch(true);
     }
     
     private void Update()
@@ -53,7 +53,7 @@ public class CameraSwitcher : MonoBehaviour
         //print("вызван switch c " + onMain);
         if (onMain)
         {
-            //print("переключаемся на главную");
+            print("переключаемся на главную");
             //main.SetActive(true);
             foreach (Image img in intoCanvas)
             {
@@ -64,7 +64,7 @@ public class CameraSwitcher : MonoBehaviour
 
         else
         {
-           // print("переключаемся с главной");
+           print("переключаемся с главной");
             //main.SetActive(false);
             foreach (Image img in intoCanvas)
             {
