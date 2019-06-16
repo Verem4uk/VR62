@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.4964127, b: 0.57481724, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -494,7 +494,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1e-45, y: 3.52e-43, z: 0, w: 3.4379122e-10}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2583,19 +2583,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 322682316, guid: 060d897a16e1a8a45881a66514ce2031, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 0.22499
       objectReference: {fileID: 0}
     - target: {fileID: 322682316, guid: 060d897a16e1a8a45881a66514ce2031, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.014007
       objectReference: {fileID: 0}
     - target: {fileID: 322682316, guid: 060d897a16e1a8a45881a66514ce2031, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 441
+      value: 440.45
       objectReference: {fileID: 0}
     - target: {fileID: 322682316, guid: 060d897a16e1a8a45881a66514ce2031, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 400
+      value: 442
       objectReference: {fileID: 0}
     - target: {fileID: 322682316, guid: 060d897a16e1a8a45881a66514ce2031, type: 3}
       propertyPath: m_RootOrder
@@ -3436,10 +3436,10 @@ RectTransform:
   m_Father: {fileID: 734244300}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -360, y: 0}
+  m_SizeDelta: {x: 440, y: 442}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1375899814
 MonoBehaviour:
@@ -3515,10 +3515,10 @@ RectTransform:
   m_Father: {fileID: 734244300}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -360, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.22497559, y: 0}
+  m_SizeDelta: {x: 439.45, y: 442}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1410384748
 MonoBehaviour:
@@ -5928,7 +5928,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6369815738953430344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f5cf3afed65dc44bbfce28d14a59745, type: 3}
+  m_Script: {fileID: 11500000, guid: dbc759c160396634d9ed74afee00ff84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6369815738953430360

@@ -20,14 +20,9 @@ public class MoveDrug : MonoBehaviour {
        // EventManager.MovedAnalizator(Persent(min,max,value));
     }
 
-    private void OnMouseDrag()
+    private void OnMouseClick()
     {
         startdrug = true;
-    }
-
-    private void OnMouseUp()
-    {
-        startdrug = false;
     }
 
     private void FixedUpdate()
