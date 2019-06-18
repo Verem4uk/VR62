@@ -31,6 +31,7 @@ public class CameraSwitcher : MonoBehaviour
             //print(img.name);
         }
         Switch(true);
+       
     }
     
     private void Update()
