@@ -37,12 +37,12 @@ public class CameraSwitcher : MonoBehaviour
     private void Update()
     {
         //print(Vector3.Distance(gameObject.transform.position, okylar.transform.position));
-        if (!into && Vector3.Distance(gameObject.transform.position, okylar.transform.position) < 2)
+        if (!into && Vector3.Distance(gameObject.transform.position, okylar.transform.position) < 0.2f)
         {
             Switch(false);
         }
 
-        else if (into && Vector3.Distance(gameObject.transform.position, okylar.transform.position) > 2)
+        else if (into && Vector3.Distance(gameObject.transform.position, okylar.transform.position) > 0.2f)
         {
             Switch(true);
         }

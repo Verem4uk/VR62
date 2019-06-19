@@ -27,15 +27,15 @@ MonoBehaviour:
     distortionRenderingLayer: 31
     eyewearType: 0
     stereoFramework: 0
-    seeThroughConfiguration: 0
-    viewerName: 
-    viewerManufacturer: 
+    seeThroughConfiguration: 1
+    viewerName: Generic Cardboard
+    viewerManufacturer: Vuforia
     useCustomViewer: 0
     customViewer:
       Version: 0
       Name: 
       Manufacturer: 
-      ButtonType: 0
+      ButtonType: 1
       ScreenToLensDistance: 0
       InterLensDistance: 0
       TrayAlignment: 0

@@ -85,21 +85,21 @@ public class Rings : MonoBehaviour
                 {
                     float valueInPersent = EventManager.ToPersent(17, 21, value);
                    // print("значение процента" + valueInPersent);
-                    float valueRect = EventManager.FromPersent(204, 245, valueInPersent);
+                    float valueRect = EventManager.FromPersent(500, 600, valueInPersent);
                     //print("Значение отступа" +valueRect);
                     return valueRect;                    
                 }
             case 2:
                 {
                     float valueInPersent = EventManager.ToPersent(24, 30, value);
-                    float valueRect = EventManager.FromPersent(250, 312, valueInPersent);
+                    float valueRect = EventManager.FromPersent(480, 760, valueInPersent);
                     //print("Значение отступа" + valueRect);
                     return valueRect;
                 }
             case 3:
                 {
                     float valueInPersent = EventManager.ToPersent(29, 36, value);
-                    float valueRect = EventManager.FromPersent(420, 515, valueInPersent);
+                    float valueRect = EventManager.FromPersent(1000, 1200, valueInPersent);
                     //print("Значение отступа" + valueRect);
                     return valueRect;
                 }

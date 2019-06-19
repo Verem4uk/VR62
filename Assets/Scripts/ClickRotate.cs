@@ -10,6 +10,8 @@ public class ClickRotate : MonoBehaviour
 
     float previousAngle;
 
+float curentRotation = 105f;	
+
     private void Start()
     {
         EventManager.ChangeColor(Color.red);
@@ -18,17 +20,20 @@ public class ClickRotate : MonoBehaviour
    void OnMouseDown()
     {
         print("клик обработан");
-        float newz = transform.eulerAngles.z - 20;
-        CalculalteAngle(newz);
+        curentRotation -= 20;
+        CalculalteAngle(curentRotation);
     }
     
     void CalculalteAngle(float angle)
     {
-        if (angle < 15) angle = 105;
+        if (angle < 15) 
+{angle = 105;
+curentRotation = 105;
+}
             transform.localEulerAngles = new Vector3(0, -90, angle);
             previousAngle = angle;
             EventManager.ChangeColor(CalculateColor(angle));
-       
+      
 
 
         // EventManager.ChangeColor()
@@ -36,13 +41,15 @@ public class ClickRotate : MonoBehaviour
 
     Color CalculateColor(float angle)
     {
-        switch ((int)angle)
+        print("angle "+angle);
+        switch (angle)
         {
-            case 20: return Color.white;
-            case 40: return Color.blue;
-            case 60: return Color.yellow;
-            case 80: return Color.green;
-            case 100: return Color.red;
+ 
+            case 25: return Color.white;
+            case 45: return Color.blue;
+            case 65: return Color.yellow;
+            case 85: return Color.green;
+            case 105: return Color.red;
             default: return Color.white;
 
         }
